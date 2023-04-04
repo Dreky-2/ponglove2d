@@ -6,16 +6,18 @@ function Player:new()
   self.y = windowHeight / 2
   self.speed = windowHeight / 2 
   self.width = 10
-  self.height = 50
-    self.originy = self.height / 2
-  self.originx = self.width / 2
+  self.height = 100
+self.center = self.y + self.height / 2
 end
 
 function Player:update(dt)
+
   local windowHeight = love.graphics.getHeight()
 if  love.keyboard.isDown("w","up","a", "left")then
+ 
   self.y = self.y - self.speed * dt
 elseif love.keyboard.isDown("s","d","right", "down") then
+  
   self.y = self.y + self.speed * dt
   
 end
