@@ -5,17 +5,16 @@ function Enemy:new()
     self.x = love.graphics.getWidth() - 20
   self.y = windowHeight / 2
   self.speed = windowHeight / 2 
-  self.yspeed = 50
+  self.yspeed = 100
     self.width = 10
-  self.height = 50
-    self.originy = self.height / 2
-  self.originx = self.width / 2
+  self.height = 100
+self.center = self.y + self.height / 2
 end
 
 function Enemy:update(dt, bally)
-  if bally > self.y then
+  if bally - 25 > self.y then
     self.y = self.y + self.yspeed * dt
-  elseif bally < self.y then
+  elseif bally - 25< self.y then
     self.y = self.y - self.yspeed * dt
     end
 end
