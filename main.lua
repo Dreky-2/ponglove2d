@@ -1,11 +1,14 @@
-function love.load()
+  function love.load()
   Object = require "classic"
   require "player"
   require "enemy"
   require "ball"
   require "collision"
   require "angle"
+  require "line"
+  paddlesnd = love.audio.newSource("paddleBeep.wav", "static")
   b1 = Ball()
+  line = Line()
   p1 = Player()
   enemy = Enemy()
   end
@@ -14,7 +17,7 @@ function love.load()
     
     if checkCollision(p1, b1) then
       
-      
+      love.audio.play(paddlesnd)
       p1.center = p1.y + p1.height / 2
       b1.center = b1.y + b1.height / 2
       local temp = anglecalc(p1,b1)
@@ -23,7 +26,7 @@ function love.load()
         b1.speedx = -b1.speedx
 
   elseif checkCollision(enemy, b1) then
-    
+    love.audio.play(paddlesnd)
       enemy.center = enemy.y + enemy.height / 2
       b1.center = b1.y + b1.height / 2
       local temp = anglecalc(p1,b1)
@@ -38,6 +41,7 @@ function love.load()
   end
 
   function love.draw()
+line:draw()
   b1:draw()
   p1:draw()
   enemy:draw()
