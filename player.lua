@@ -2,6 +2,7 @@ Player = Object:extend()
 
 function Player:new()
   local windowHeight = love.graphics.getHeight()
+  self.img = love.graphics.newImage("paddle.png")
   self.x = 10
   self.y = windowHeight / 2
   self.speed = windowHeight / 2 
@@ -30,5 +31,5 @@ elseif self.y < 0 then
 end
 
 function Player:draw()
-  love.graphics.rectangle("fill", self.x, self.y, self.width, self.height)
+    love.graphics.draw(self.img,self.x, self.y)
 end

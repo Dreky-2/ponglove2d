@@ -1,0 +1,40 @@
+[33mcommit e00821a7d24a71452fc20157880ddaa6949a4bd1[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Dreky <38798094+Dreky-2@users.noreply.github.com>
+Date:   Tue Apr 4 13:51:03 2023 +0300
+
+    Update README.md
+
+[33mcommit ae69e66647b64ae6cb0c4ee8e61e55238debe7d4[m[33m ([m[1;33mtag: Release[m[33m)[m
+Merge: 3c1101e 34c1ee7
+Author: Dreky <38798094+Dreky-2@users.noreply.github.com>
+Date:   Tue Apr 4 13:46:51 2023 +0300
+
+    Merge pull request #1 from Dreky-2/dev
+    
+    added ball angle change and movement up and down the y axis depending…
+
+[33mcommit 34c1ee7735edd0ffe1e0d958cb3ee3fd0e633fdd[m
+Author: Dreky <38798094+Dreky-2@users.noreply.github.com>
+Date:   Tue Apr 4 13:45:46 2023 +0300
+
+    added ball angle change and movement up and down the y axis depending on angle
+
+[33mcommit 3c1101e7b1fcde6fb2366fc7906d39c7976432c6[m[33m ([m[1;33mtag: alpha[m[33m)[m
+Author: Dreky <38798094+Dreky-2@users.noreply.github.com>
+Date:   Sun Apr 2 08:47:36 2023 +0300
+
+    Update README.md
+
+[33mcommit 5e627ed5dfaed343738c35b86ca28de394a08e70[m
+Author: Dreky <38798094+Dreky-2@users.noreply.github.com>
+Date:   Sun Apr 2 08:47:12 2023 +0300
+
+    init
+    
+    functional unfinished version.
+
+[33mcommit b48123f85314a992d48cab6b64dba9d5ee0e402f[m
+Author: Dreky <38798094+Dreky-2@users.noreply.github.com>
+Date:   Sun Apr 2 08:46:26 2023 +0300
+
+    Initial commit
