@@ -1,0 +1,48 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: windows-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo test
+        
+      - name: Run a multi-line script
+        run: |
+          .\build.bat
+          mkdir -p path/to/artifact
+          copy src.exe path/to/artifact/src.exe
+          copy love.dll path/to/artifact/love.dll
+          copy SDL2.dll path/to/artifact/SDL2.dll
+          copy lua51.dll path/to/artifact/lua51.dll
+          copy mpg123.dll path/to/artifact/mpg123.dll
+          copy msvcp120.dll path/to/artifact/msvcp120.dll
+          copy msvcr120.dll path/to/artifact/msvcr120.dll
+          copy openAL32.dll path/to/artifact/openAl32.dll
+     
+      - uses: actions/upload-artifact@v3
+        with:
+            name: build
+            path: path/to/artifact/ # or path/to/artifact
