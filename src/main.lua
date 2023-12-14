@@ -20,7 +20,7 @@
       p1.center = p1.y + p1.height / 2
       b1.center = b1.y + b1.height / 2
       b1.speedy = p1.center
-      
+      b1.x = b1.x + 10
         b1.speedx = -b1.speedx
 
   elseif checkCollision(enemy, b1) then
@@ -29,7 +29,7 @@
       b1.center = b1.y + b1.height / 2
       b1.speedy = p1.center
       b1.speedx = -b1.speedx
-      
+      b1.x = b1.x - 10
     end
     
     p1:update(dt)
