@@ -11,7 +11,7 @@ function Ball:new()
   self.scoreE = 0
   self.x = windowWidth / 2
   self.speedx = windowWidth / 1.5
-  self.speedy = 0
+  self.speedy = math.random(-100,100)
     self.width = 10
   self.height = 10
 self.center = self.y 
@@ -30,12 +30,14 @@ local windowHeight = love.graphics.getHeight()
     self.score = self.score + 1
     love.audio.play(self.scoreB)
     self.speedx = -self.speedx
+    self.speedy = math.random(-100,100)
   elseif self.x > windowWidth then
     self.x = windowWidth / 2
     self.y = windowHeight / 2
     love.audio.play(self.scoreG)
     self.scoreE = self.scoreE + 1
     self.speedx = -self.speedx
+    self.speedy = math.random(-100,100)
   end
     if self.y < 0 then
     
