@@ -41,7 +41,7 @@ jobs:
           copy msvcp120.dll path/to/artifact/msvcp120.dll
           copy msvcr120.dll path/to/artifact/msvcr120.dll
           copy openAL32.dll path/to/artifact/openAl32.dll
-      - name: upload artifact
+     
       - uses: actions/upload-artifact@v3
         with:
             name: build
