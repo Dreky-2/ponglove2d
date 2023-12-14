@@ -31,9 +31,13 @@ jobs:
         
       - name: Run a multi-line script
         run: |
-          echo What is in current dir
-          dir
           .\build.bat
-          echo again
-          dir
-          
+          mkdir -p path/to/artifact
+          copy src.exe path/to/artifact/src.exe
+          copy love.dll path/to/artifact/love.dll
+          copy SDL2.dll path/to/artifact/SDL2.dll
+          copy lua51.dll path/to/artifact/lua51.dll
+          copy mpg123.dll path/to/artifact/mpg123.dll
+          copy msvcp120.dll path/to/artifact/msvcp120.dll
+          copy msvcr120.dll path/to/artifact/msvcr120.dll
+          copy openAL32.dll path/to/artifact/openAl32.dll
