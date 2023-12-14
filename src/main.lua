@@ -33,7 +33,7 @@
     end
     
     p1:update(dt)
-    enemy:update(dt, b1.y)
+    enemy:update(dt, b1.y, b1.x)
     b1:update(dt)
   end
 
