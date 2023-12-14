@@ -33,4 +33,7 @@ jobs:
         run: |
           echo What is in current dir
           dir
+          .\build.bat
+          echo again
+          dir
           
