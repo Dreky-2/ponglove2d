@@ -1,4 +1,5 @@
   function love.load()
+  math.randomseed(os.time())
   Object = require "classic"
   require "player"
   require "enemy"
@@ -17,17 +18,16 @@
     if checkCollision(p1, b1) then
       
       love.audio.play(paddlesnd)
-      p1.center = p1.y + p1.height / 2
-      b1.center = b1.y + b1.height / 2
-      b1.speedy = p1.center
+      b1.center = b1.y + b1.height / 2 
+      b1.speedy = p1.center + math.random(-100,100)
       b1.x = b1.x + 10
         b1.speedx = -b1.speedx
 
   elseif checkCollision(enemy, b1) then
     love.audio.play(paddlesnd)
       enemy.center = enemy.y + enemy.height / 2
-      b1.center = b1.y + b1.height / 2
-      b1.speedy = p1.center
+      b1.center = b1.y + b1.height / 2 
+      b1.speedy = p1.center + math.random(-100,100)
       b1.speedx = -b1.speedx
       b1.x = b1.x - 10
     end

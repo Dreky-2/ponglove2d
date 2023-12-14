@@ -5,8 +5,7 @@ function Enemy:new()
   self.x = love.graphics.getWidth() - 20
   self.img = love.graphics.newImage("paddle.png")
   self.y = windowHeight / 2
-  self.speed = windowHeight / 2
-  self.yspeed = 100
+  self.speed = windowHeight / 3
   self.width = 10
   self.height = 100
 
