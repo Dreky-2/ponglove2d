@@ -9,8 +9,8 @@ function Ball:new()
   self.y = windowHeight / 2
   self.score = 0
   self.scoreE = 0
-  self.x = windowWidth / 12
-  self.speedx = windowWidth / 6
+  self.x = windowWidth / 2
+  self.speedx = windowWidth / 1.5
   self.speedy = 0
     self.width = 10
   self.height = 10
